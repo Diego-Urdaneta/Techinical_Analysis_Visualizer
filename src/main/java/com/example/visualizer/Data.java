@@ -1,7 +1,5 @@
 package com.example.visualizer;
 
-import java.util.ArrayList;
-
 public class Data{
     String time;
     double high;
@@ -9,17 +7,17 @@ public class Data{
     double open;
     double close;
     int volume;
-    ArrayList<Data> series;
 
     public Data(){}
 
-    public void setAll(String time, double high, double low, double open, double close, int volume) {
+    public Data setAll(String time, double high, double low, double open, double close, int volume) {
         this.time = time;
         this.high = high;
         this.low = low;
         this.open = open;
         this.close = close;
-        this.volume = volume;}
+        this.volume = volume;
+        return this;}
 
     public String getTime() {
         return time;
