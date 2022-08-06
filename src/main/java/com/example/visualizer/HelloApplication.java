@@ -13,11 +13,11 @@ public class HelloApplication extends Application {
     public void start(Stage stage) throws IOException {
         Series series = new Series();
 
-        JSONRequest request = new JSONRequest(series);
+        DataHandler dataHandler = new DataHandler(series);
 
-        request.Request();
+        dataHandler.request();
 
-        Candlestick_Graph grid = new Candlestick_Graph(series);
+        Candlestick_Graph grid = new Candlestick_Graph(series, dataHandler);
 
         Scene scene = new Scene(grid);
 
